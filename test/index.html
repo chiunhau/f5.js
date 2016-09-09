@@ -6,8 +6,14 @@
 	<script src="p5.js"></script>
 	<script src="../f5.js"></script>
 	<script>
-		var swatch = new f5.Swatch();
-		swatch.hi();
+		function setup() {
+			createCanvas(500, 500);
+			var grid = new f5.Grid();
+			translate(100, 100);
+			grid.go(function() {
+			  ellipse(0, 0, 20, 20);
+			})
+		}
 	</script>
 </head>
 <body>
